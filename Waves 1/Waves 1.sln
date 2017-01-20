@@ -1,14 +1,18 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{B8796A74-83AF-240F-6A26-878ACBBDFE62}") = "Waves 1", "Assembly-CSharp.csproj", "{97FD01E1-6E41-E30C-3E0C-3457332F27CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{97FD01E1-6E41-E30C-3E0C-3457332F27CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FD01E1-6E41-E30C-3E0C-3457332F27CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FD01E1-6E41-E30C-3E0C-3457332F27CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FD01E1-6E41-E30C-3E0C-3457332F27CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
