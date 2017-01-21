@@ -23,4 +23,13 @@ public class PointController : MonoBehaviour {
 		}
         
     }
+
+	void OnTriggerEnter(Collider other) {
+		Debug.Log("Collision with a trigger has happened!");
+		if(other.tag=="Wave"){
+			Debug.Log("Collision with a point has happened!");
+        	
+		}	
+
+    }
 }
