@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackGroundController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\MusicClip.cs" />
      <Compile Include="Assets\Scripts\PointController.cs" />
      <Compile Include="Assets\Scripts\Reflector.cs" />
      <Compile Include="Assets\Scripts\Sponge.cs" />

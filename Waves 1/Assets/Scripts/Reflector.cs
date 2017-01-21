@@ -10,6 +10,7 @@ public class Reflector : MonoBehaviour {
 	public GameController gc;
 	public Camera cam;
 
+
 	void OnMouseDrag(){
 		if (gc.state==0){
 
@@ -24,13 +25,12 @@ public class Reflector : MonoBehaviour {
 
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log("Collision with a trigger has happened!");
+		//Debug.Log("Collision with a trigger has happened!");
 		if(other.tag=="Wave"){
-			Debug.Log("Collision with a point has happened!");
+			//Debug.Log("Collision with a point has happened!");
         	Destroy(other.gameObject);
 			Destroy(sc);
 			GameObject newWave = Instantiate(wavePrefab,transform.position,Quaternion.identity);
-
 		}	
 
     }

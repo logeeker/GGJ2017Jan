@@ -6,7 +6,7 @@ public class PointController : MonoBehaviour {
 
 	public GameController gameController;
 
-	public int order;
+	public int id;
 
 	SphereCollider sc;
 
@@ -35,7 +35,7 @@ public class PointController : MonoBehaviour {
     }
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log("Collision with a trigger has happened!");
+		//Debug.Log("Collision with a trigger has happened!");
 		if(other.tag=="Wave"){
 			if (audio == null){
 				Debug.Log("No audio attached!");
@@ -43,8 +43,8 @@ public class PointController : MonoBehaviour {
 			}else{
 				audio.Play();
 			}
-			Debug.Log("Collision with a point has happened!");
-        	bool temp =gameController.hasCollideWith(order);
+			//Debug.Log("Collision with a point has happened!");
+        	bool temp =gameController.hasCollideWith(id);
         	//Debug.Log(temp);
 		}	
 

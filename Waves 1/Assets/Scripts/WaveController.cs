@@ -10,6 +10,8 @@ public class WaveController : MonoBehaviour {
 
 	float scale;
 
+	GameController gc;
+
 
 
 
@@ -18,6 +20,7 @@ public class WaveController : MonoBehaviour {
 		sc=transform.GetComponent<SphereCollider>();
 		sc.radius=0.5f;
 		scale=sc.radius/5;
+		gc=GameObject.Find("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
@@ -29,8 +32,15 @@ public class WaveController : MonoBehaviour {
 		}
 		sc.radius=tempR;
 		transform.localScale=new Vector3(scale,scale,1);
-		if (scale>=4){
-			Destroy(gameObject);	
+		if (scale>=5.1){
+			bool temp = gc.checkComplition();
+			if (temp){
+				Debug.Log("Win");
+			}else{
+				Debug.Log("Lose");
+			}
+			Destroy(gameObject);
+				
 		}	
 	}
 

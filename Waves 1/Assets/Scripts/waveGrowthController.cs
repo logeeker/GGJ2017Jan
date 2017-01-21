@@ -7,6 +7,6 @@ public class waveGrowthController : MonoBehaviour {
 	public float WaveGrowth;
 
 	public float ScaleAlgorithm(float scale){
-		return scale*WaveGrowth;
+		return scale+=WaveGrowth;
 	}
 }

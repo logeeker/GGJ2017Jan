@@ -7,8 +7,12 @@ public class GameController : MonoBehaviour {
 	public int state=0;
 
 	public GameObject startButton;
+	public GameObject Texts;
+	public int index =0;
 
-	int index =0;
+	public int[] theOrder;
+
+
 	/*
 	state = 0;
 	player is identifying the pitch of each point
@@ -30,14 +34,28 @@ public class GameController : MonoBehaviour {
 		state=1;
 		Debug.Log("Game has started");
 		Destroy(startButton);
+		Destroy(Texts);
 	}
 
-	public bool hasCollideWith(int order){
-		if (index==order){
-			index++;
-			return true;
+	public bool hasCollideWith(int id){
+		bool rtn = true;
+		//Debug.Log("this is "+theOrder[index]+" next is "+theOrder[index+1]);
+		if (theOrder[index]==id){
+			//Debug.Log("True");
+
 		}else{
-			return false;
+			
+			Debug.Log("Should be "+ theOrder[index]+" but get "+ id);
+			Debug.Log("Lose");
+			rtn=false;
 		}
+
+		index++;
+		return rtn;
+
+	}
+
+	public bool checkComplition(){
+		return index==theOrder.Length-1;
 	}
 }

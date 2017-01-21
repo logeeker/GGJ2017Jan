@@ -23,9 +23,9 @@ public class Sponge : MonoBehaviour {
 
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log("Collision with a trigger has happened!");
+		//Debug.Log("Collision with a trigger has happened!");
 		if(other.tag=="Wave"){
-			Debug.Log("Collision with a point has happened!");
+			//Debug.Log("Collision with a point has happened!");
         	Destroy(other.gameObject);
 			//GameObject newWave = Instantiate(wavePrefab,transform.position,Quaternion.identity);
 
