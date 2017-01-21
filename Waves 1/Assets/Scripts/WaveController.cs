@@ -6,21 +6,30 @@ public class WaveController : MonoBehaviour {
 
 	SphereCollider sc;
 
+	public waveGrowthController wgc;
 
-	public float waveSpeed;
+	float scale;
+
+
+
 
 	// Use this for initialization
 	void Start () {
 		sc=transform.GetComponent<SphereCollider>();
-		sc.radius=0.1f;
+		sc.radius=0.5f;
+		scale=sc.radius/5;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		sc.radius=sc.radius*waveSpeed;
-		float temp = sc.radius/5;
-		transform.localScale=new Vector3(temp,temp,1);
-		if (sc.radius>=15){
+		scale=wgc.ScaleAlgorithm(scale);
+		float tempR= scale*5;
+		if (tempR>5){
+			tempR=5;
+		}
+		sc.radius=tempR;
+		transform.localScale=new Vector3(scale,scale,1);
+		if (scale>=4){
 			Destroy(gameObject);	
 		}	
 	}

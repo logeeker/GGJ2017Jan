@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	
 	public int state=0;
 
 	public GameObject startButton;
+
+	int index =0;
 	/*
 	state = 0;
 	player is identifying the pitch of each point
@@ -29,5 +30,14 @@ public class GameController : MonoBehaviour {
 		state=1;
 		Debug.Log("Game has started");
 		Destroy(startButton);
+	}
+
+	public bool hasCollideWith(int order){
+		if (index==order){
+			index++;
+			return true;
+		}else{
+			return false;
+		}
 	}
 }
