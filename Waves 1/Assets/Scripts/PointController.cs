@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointController : MonoBehaviour {
 
-	public GameController gameController;
+	GameController gameController;
 
 	public int id;
 
@@ -13,6 +13,7 @@ public class PointController : MonoBehaviour {
 	AudioSource audio;
 
 	void Start () {
+		gameController=GameObject.Find("GameController").GetComponent<GameController>();
 		sc=transform.GetComponent<SphereCollider>();
 		audio = GetComponent<AudioSource>();
 	}
