@@ -46,7 +46,7 @@ public class PointController : MonoBehaviour {
 			}
 			//Debug.Log("Collision with a point has happened!");
         	bool temp =gameController.hasCollideWith(id);
-        	//Debug.Log(temp);
+        	Debug.Log(temp);
 		}	
 
     }
